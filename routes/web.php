@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\mahasiswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::resource('/',mahasiswaController::class);
+
+/*Route::get('/', function () {
     return view('UTS laravel/home');
 });
 
@@ -49,3 +52,4 @@ Route::get('/form', function () {
     $jumlahproduk = count($jenisProduk);
     return view('UTS laravel/form', compact('jenisProduk', 'jumlahproduk'));
 });
+*/
